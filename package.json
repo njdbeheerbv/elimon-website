@@ -1,0 +1,21 @@
+{
+  "name": "elimon-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website van Elimon e-lifting & montage B.V.",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --format=esm --splitting --target=es2020 --outdir=public/js --chunk-names=chunks/[name]-[hash]",
+    "dev": "npm run build && vercel dev"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "nodemailer": "9.0.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
