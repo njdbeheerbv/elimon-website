@@ -41,13 +41,6 @@ const KINDS = {
     msg: "Wat moet er gehesen worden?",
     ph: "Bijv. 6 glasplaten naar de eerste verdieping",
   },
-  smartlift: {
-    title: "Smartlift huren",
-    intro: "Met een Smartlift plaatst u zware ruiten veilig en zonder tillen. We leggen bij ophalen uit hoe hij werkt.",
-    btn: "Verstuur huuraanvraag",
-    msg: "Waarvoor gaat u hem gebruiken?",
-    ph: "Bijv. plaatsen van triple glas in houten kozijnen",
-  },
 };
 let kind = "offerte";
 
@@ -89,7 +82,7 @@ document.querySelector(".tabs").addEventListener("keydown", (e) => {
 });
 document.querySelectorAll("[data-kind-link]").forEach((a) => a.addEventListener("click", () => setKind(a.dataset.kindLink)));
 
-const startKind = { offerte: "offerte", "kraan-huren": "kraan", "smartlift-huren": "smartlift" }[location.hash.slice(1)];
+const startKind = { offerte: "offerte", "kraan-huren": "kraan" }[location.hash.slice(1)];
 setKind(startKind || "offerte");
 if (startKind) document.getElementById("aanvragen").scrollIntoView();
 

@@ -3,7 +3,6 @@ import { getTransporter, renderMail, FROM, TO } from "../lib/mail.js";
 const SOORTEN = {
   offerte: "Offerteaanvraag",
   kraan: "Huuraanvraag kraan (Hoeflon C6e)",
-  smartlift: "Huuraanvraag Smartlift",
   vacature: "Sollicitatie (leerling) kozijnmonteur",
 };
 // Bijlagen samen tot deze grootte gaan als echte bijlage mee; daarboven alleen als link

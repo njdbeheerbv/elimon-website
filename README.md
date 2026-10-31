@@ -17,7 +17,7 @@ Het is een statische site (`public/`) met twee kleine Vercel-functies (`api/`) v
 
 ## Formulieren
 
-Er zijn vier soorten aanvragen: offerte, kraan huren, Smartlift huren en de vacature.
+Er zijn drie soorten aanvragen: offerte, kraan huren en de vacature.
 Bijlagen gaan eerst rechtstreeks naar Vercel Blob. De mail aan Elimon bevat ze als bijlage
 (tot 15 MB samen) en altijd als downloadlink.
 
