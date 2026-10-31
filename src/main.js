@@ -65,7 +65,17 @@ function setKind(k) {
   document.getElementById("r-msg-lbl").textContent = c.msg;
   document.getElementById("r-msg").placeholder = c.ph;
   document.getElementById("rq-done").hidden = true;
+  updateKit();
 }
+
+// Kitwerk is een optie bij vliesgevels en kozijnen, geen losse soort werk
+function updateKit() {
+  const show = [...document.querySelectorAll('#reqform input[name="werk"]')].some(
+    (c) => c.checked && (c.value === "Vliesgevel" || c.value === "Kozijnen"),
+  );
+  document.getElementById("o-kit").hidden = !show;
+}
+document.querySelectorAll('#reqform input[name="werk"]').forEach((c) => c.addEventListener("change", updateKit));
 
 document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => setKind(t.dataset.kind)));
 document.querySelector(".tabs").addEventListener("keydown", (e) => {
